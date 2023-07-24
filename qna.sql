@@ -235,6 +235,11 @@ WHERE answer_id IN (SELECT answer_id FROM Answer WHERE expert_id=2)
 GROUP BY answer_id;
 
 
+-- --questions solved by an expert in last 15 days--
+SELECT *
+FROM Answer
+WHERE Expert_id=1 and DATEDIFF(NOW(),post_date)<=15;
+
   
 
 
